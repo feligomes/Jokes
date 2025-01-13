@@ -88,3 +88,15 @@ jokes-app/
 └── tests/
 ```
 
+## Future Improvements
+
+- **Data Persistence**: Currently, the store data (jokes and ratings) is cleared on page refresh. This could be improved by:
+  - Implementing local storage to persist ratings
+  - Adding a backend API to store user preferences
+  - Using IndexedDB for offline capabilities
+- **User Authentication**: Add user accounts to save personal joke ratings
+- **Favorites System**: Allow users to bookmark their favorite jokes
+- **Share Feature**: Enable sharing jokes on social media
+
+## Contributing
+
