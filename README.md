@@ -2,6 +2,8 @@
 
 A modern Vue.js application for managing and rating jokes, built with Vue 3 and Pinia for state management.
 
+🌐 **[Live Demo](https://feligomes.github.io/Jokes/)**
+
 ## Features
 
 - Display a collection of jokes with setup and punchline
