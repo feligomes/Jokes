@@ -33,7 +33,7 @@ A modern Vue.js application for managing and rating jokes, built with Vue 3 and 
 
 1. Clone the repository:
 ```bash
-git clone [repository-url]
+git clone https://github.com/feligomes/Jokes.git
 cd jokes-app
 ```
 
@@ -97,4 +97,3 @@ jokes-app/
 - **User Authentication**: Add user accounts to save personal joke ratings
 - **Favorites System**: Allow users to bookmark their favorite jokes
 - **Share Feature**: Enable sharing jokes on social media
-
