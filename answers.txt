@@ -1,0 +1,49 @@
+Hey, here's a quick breakdown of closures and side effects in our Jokes app:
+
+1. Closures
+-----------
+A closure is just a function that can access variables from its outer scope, even after that outer function is done. Here's one from our code:
+
+```javascript
+getters: {
+  sortedJokes: (state) => {  // This is a closure
+    return [...state.jokes].sort((a, b) => {  // This inner function is also a closure
+      if (state.sortBy === 'type') {
+        return a.type.localeCompare(b.type)
+      }
+      return b.rating - a.rating
+    })
+  }
+}
+```
+It uses `state` even after the getter is defined
+
+2. Side Effects
+--------------
+Side effects happen when our functions change stuff outside their scope. Like updating the store or making API calls.
+
+Main example from our code:
+```javascript
+async fetchJokes() {
+  this.loading = true  // Changes store state
+  try {
+    const response = await fetch('...') // API call
+    this.jokes = data.map(joke => ({ ...joke, rating: 0 })) // More state changes
+  } finally {
+    this.loading = false
+  }
+}
+```
+
+Other side effects we have:
+- `rateJoke()` - Changes joke ratings
+- `removeJoke()` - Removes jokes
+- `updateSortBy()` - Changes sort order and page
+
+We manage these by:
+- Keeping them in the Pinia store
+- Making them predictable
+- Using Vue's reactivity
+- Making them easy to debug
+
+These side effects are necessary for our app to work, we could use immutable patterns or add more error handling. But it is pretty standard to use them. 
