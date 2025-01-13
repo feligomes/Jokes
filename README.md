@@ -98,5 +98,3 @@ jokes-app/
 - **Favorites System**: Allow users to bookmark their favorite jokes
 - **Share Feature**: Enable sharing jokes on social media
 
-## Contributing
-
